@@ -1,1 +1,0 @@
-export * from './src/app/modules/ngn-alert/ngn-alrt.module'
