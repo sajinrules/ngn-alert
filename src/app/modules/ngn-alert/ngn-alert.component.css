@@ -1,3 +1,36 @@
 h1 {
   color: red;
 }
+.ngn-alert{
+	text-align: center;
+	padding: 10px;
+	border: 1px solid;
+	margin: 0 auto;
+	font-size: 20px;
+}
+.ngn-default{
+	width: 200px;
+    height: 150px;
+}
+.ngn-success{
+	color: #fff;
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+}
+.ngn-warning{
+	color: #fff;
+    background-color: #ec971f;
+    border-color: #eb9316;
+}    
+
+.ngn-danger{
+	color: #fff;
+    background-color: #c9302c;
+    border-color: #c12e2a;
+}
+.ngn-icon{
+	margin: 5px;
+}
+.ngn-default .ngn-icon img{
+	width: 90px;
+}	
