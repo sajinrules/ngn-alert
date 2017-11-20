@@ -1,0 +1,17 @@
+<svg width="612" height="792" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <defs>
+   <rect y="140" x="50" width="512" id="SVGID_1_" height="512"/>
+  </defs>
+  <clipPath id="SVGID_2_">
+   <use id="svg_3" xlink:href="#SVGID_1_"/>
+  </clipPath>
+  <path stroke-width="45" stroke="#ffffff" fill="none" clip-path="url(#SVGID_2_)" id="svg_4" d="m306,629.5c128.8,0 233.5,-104.7 233.5,-233.5s-104.7,-233.5 -233.5,-233.5s-233.5,104.7 -233.5,233.5s104.7,233.5 233.5,233.5l0,0z" class="st0"/>
+  <polygon fill="#ffffff" id="svg_5" points="421.4,271 241.9,450.5 174.9,383.5 122,436.4 241.9,556.2 257.3,540.8 257.4,540.8 474.3,323.9    421.4,271  " class="st1"/>
+ </g>
+</svg>
