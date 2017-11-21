@@ -1,10 +1,10 @@
 <div [ngSwitch]="options.type">
-	<div class="ngn-alert ngn-default ngn-success" *ngSwitchCase="success">
+	<div class="ngn-alert ngn-default ngn-success" *ngSwitchCase="'success'">
 		<!-- <div class="ngn-close"><img src="../../assets/ic_clear_white_18px.svg"/></div>-->
 		<div class="ngn-icon"><img src="../../assets/ic_done_white_24px.svg"/></div>
 		<div class="ngg-content"><ng-content></ng-content></div>
 	</div>
-	<div class="ngn-alert ngn-default ngn-danger" *ngSwitchCase="fail">
+	<div class="ngn-alert ngn-default ngn-danger" *ngSwitchCase="'fail'">
 		<!-- <div class="ngn-close"><img src="../../assets/ic_clear_white_18px.svg"/></div>-->
 		<div class="ngn-icon"><img src="../../assets/ic_done_white_24px.svg"/></div>
 		<div class="ngg-content"><ng-content></ng-content></div>

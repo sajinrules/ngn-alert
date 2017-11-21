@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-
+import { Options } from './ngn-interface'
 @Component({
 	selector: 'app-ngn-alert',
 	templateUrl: './ngn-alert.component.html',
@@ -7,7 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 
 export class NgnAlertComponent implements OnInit {
-	@Input() options:any={};
+	@Input() options:Options;
 	constructor(){
 	}
 	ngOnInit(){
