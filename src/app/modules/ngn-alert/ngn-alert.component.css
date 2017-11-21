@@ -7,6 +7,11 @@ h1 {
 	border: 1px solid;
 	margin: 0 auto;
 	font-size: 20px;
+	box-shadow: -1px 3px 7px 3px rgba(0,0,0,0.2);
+	position: relative;
+    left: 0;
+    right: 0;
+    top: 30%;
 }
 .ngn-default{
 	width: 200px;
@@ -41,4 +46,43 @@ h1 {
 }
 .ngn-close:hover{
 	opacity: 0.5;
+}
+.ngn-wrapper{
+	position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.ngn-loader{
+	text-align: center;
+	padding: 10px;
+	margin: 0 auto;
+	font-size: 20px;
+	position: relative;
+    left: 0;
+    right: 0;
+    top: 30%;
+}
+.loader {
+  border: 4px solid transparent;
+  border-radius: 50%;
+  border-top: 4px solid #fff;
+  width: 24px;
+  height: 24px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -1,3 +1,4 @@
 export class Options {
-    type: string;
+    text?:string;
+    type?: string;
 }
