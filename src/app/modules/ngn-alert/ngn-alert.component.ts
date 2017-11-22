@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {trigger, state, style, animate, transition } from '@angular/animations';
-import { Options } from './ngn-interface'
+import { NgnOptions } from './ngn-interface'
 @Component({
 	selector: 'app-ngn-alert',
 	templateUrl: './ngn-alert.component.html',
@@ -19,7 +19,7 @@ import { Options } from './ngn-interface'
 })
 
 export class NgnAlertComponent implements OnInit {
-	@Input() options:Options;
+	@Input() options:NgnOptions;
 	private state = 'active';
 	constructor(){
 		console.log("constructor");
