@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { NgnAlertModule } from './modules/ngn-alert/ngn-alert.module';
+import { NgnAlertModule,NgnAlertService } from './modules/ngn-alert/ngn-alert.module';
 import { NgnAlertComponent } from './modules/ngn-alert/ngn-alert.component';
 
 @NgModule({
@@ -12,7 +12,7 @@ import { NgnAlertComponent } from './modules/ngn-alert/ngn-alert.component';
     NgnAlertModule,
     BrowserModule
   ],
-  providers: [],
+  providers: [NgnAlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
