@@ -13,9 +13,7 @@ export class AppComponent {
 		type:"loading"
 	}
 	constructor(private ngnAlertService:NgnAlertService){
-		this.ngnAlertService.ngnOpen().subscribe((data)=>{
-			console.log("data:",data);
-		})
+		this.ngnAlertService.ngnActivate(this.options)
 	}
 
 }

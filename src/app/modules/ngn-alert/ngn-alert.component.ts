@@ -22,17 +22,18 @@ import { NgnAlertService } from './ngn-alert.service'
 
 export class NgnAlertComponent implements OnInit {
 	@Input() options:NgnOptions;
-	private state = 'inactive';
+	private state = 'active';
 	constructor(private ngnAlertService:NgnAlertService){
 		console.log("constructor");
-		this.ngnAlertService.ngnOpen().subscribe(message => {
-			console.log("message:",message);
-		});
+		
 		
 	}
 	ngOnInit(){
 		console.log("this.state:",this.state);
-		
+		this.ngnAlertService.ngnState().subscribe(message => {
+			console.log("koppu");
+			console.log("message:",message);
+		});
 
 		// setTimeout(()=> {
 		// 	console.log("time out:",this.state);
