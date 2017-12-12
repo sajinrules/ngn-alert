@@ -4,15 +4,17 @@ import { NgnOptions } from './ngn-interface'
 import { NgnAlertService } from './ngn-alert.service'
 
 @Component({
-	selector: 'app-ngn-alert',
+	selector: 'ngn-alert',
 	templateUrl: './ngn-alert.component.html',
 	styleUrls: ['./ngn-alert.component.css'],
 	animations: [
 	trigger('ngnState', [
 		state('inactive', style({
+			display:'none',
 			opacity:0
 		})),
 		state('active',   style({
+			display:'block',
 			opacity:1
 		})),
 		transition('active <=> inactive', animate('200ms ease-out'))
@@ -22,26 +24,16 @@ import { NgnAlertService } from './ngn-alert.service'
 
 export class NgnAlertComponent implements OnInit {
 	@Input() options:NgnOptions;
-	private state = 'active';
-	constructor(private ngnAlertService:NgnAlertService){
-		console.log("constructor");
-		
-		
-	}
+	private state = 'inactive';
+	constructor(private ngnAlertService:NgnAlertService){}
+
 	ngOnInit(){
 		console.log("this.state:",this.state);
 		this.ngnAlertService.ngnState().subscribe(message => {
-			console.log("koppu");
 			console.log("message:",message);
-		});
-
-		// setTimeout(()=> {
-		// 	console.log("time out:",this.state);
-		// 	this.state='inactive';
-		// }, 2000);
-		
+			this.options=message;
+			this.state='active';
+		});		
 	}
-	toggleState() {
-		this.state = this.state === 'active' ? 'inactive' : 'active';
-	}
+	
 }

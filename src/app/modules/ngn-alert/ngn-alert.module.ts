@@ -14,10 +14,16 @@ import { NgnAlertService } from './ngn-alert.service';
     ],
     exports: [
         NgnAlertComponent 
-    ],
-    providers: [
-        NgnAlertService
-    ],
+    ]
 })
-export class NgnAlertModule { }
+export class NgnAlertModule { 
+    static forRoot() {
+        return {
+            ngModule: NgnAlertModule,
+            providers: [ NgnAlertService ]
+        }
+    }
+
+}
 export * from './ngn-alert.service';
+export * from './ngn-alert.component';

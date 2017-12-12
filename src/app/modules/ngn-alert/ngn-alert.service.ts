@@ -2,19 +2,18 @@ import { Injectable } from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import {Observable} from 'rxjs/Observable';
 import { NgnOptions } from './ngn-interface'
-
+@Injectable()
 export class NgnAlertService{
-    private ngnSubject = new Subject<any>();
-    private options:any;
+    private ngnSubject: Subject<any> = new Subject<any>();
+    private options:any={};
     ngnActivate(options:NgnOptions){
-        console.log("options:",options);
         this.options=options;
+        this.options.state='active'
         this.ngnSubject.next(options);
-        console.log(" this.ngnSubject:",this.ngnSubject);
-        
     }
     ngnDeactivate(){
-        this.ngnSubject.next("deactivate");
+        this.options.state='inactive'
+        this.ngnSubject.next("inactive");
     }
     ngnOpen(){
         this.ngnSubject.next("activate");  
@@ -26,3 +25,5 @@ export class NgnAlertService{
         return this.ngnSubject.asObservable()
     }
 }
+
+
