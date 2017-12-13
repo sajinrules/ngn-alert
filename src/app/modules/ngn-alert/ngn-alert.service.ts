@@ -13,7 +13,8 @@ export class NgnAlertService{
     }
     ngnDeactivate(){
         this.options.state='inactive'
-        this.ngnSubject.next("inactive");
+        this.ngnSubject.next(this.options);
+        //return this.ngnSubject.asObservable()
     }
     ngnOpen(){
         this.ngnSubject.next("activate");  

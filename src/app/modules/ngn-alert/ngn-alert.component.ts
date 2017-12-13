@@ -32,8 +32,15 @@ export class NgnAlertComponent implements OnInit {
 		this.ngnAlertService.ngnState().subscribe(message => {
 			console.log("message:",message);
 			this.options=message;
-			this.state='active';
+			this.setState(this.options.state)
+			if(this.options.autoDismis && this.options.type!=='loading'){
+				setTimeout(()=>{
+					this.setState('inactive')
+				},this.options.timeout);
+			}
 		});		
 	}
-	
+	setState(state){
+		this.state=state;
+	}
 }

@@ -10,9 +10,9 @@ export class AppComponent {
 	title = 'app';
 	options = {
 		text:"Success !",
-		type:"success",
+		type:"loading",
 		autoDismis:true,
-		timeout:5
+		timeout:2000
 	}
 	constructor(private ngnAlertService:NgnAlertService){
 		
@@ -20,6 +20,9 @@ export class AppComponent {
 	onclick(){
 		console.log("clicked");
 		this.ngnAlertService.ngnActivate(this.options);
+		setTimeout(()=>{
+			this.ngnAlertService.ngnDeactivate();
+		},5000);
 	}
 
 }
