@@ -28,4 +28,3 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # ngn-alert
 npm module
->>>>>>> 7d657908a531a9d9198b7e917228accb40be1daf

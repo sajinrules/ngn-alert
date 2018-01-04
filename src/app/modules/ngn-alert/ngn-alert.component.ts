@@ -35,7 +35,7 @@ export class NgnAlertComponent implements OnInit {
 			this.setState(this.options.state)
 			if(this.options.autoDismis && this.options.type!=='loading'){
 				setTimeout(()=>{
-					this.setState('inactive')
+					//this.setState('inactive')
 				},this.options.timeout);
 			}
 		});		

@@ -1,7 +1,7 @@
 h1 {
   color: red;
 }
-.ngn-alert{
+/*.ngn-alert{
 	text-align: center;
 	padding: 10px;
 	border: 1px solid;
@@ -12,10 +12,11 @@ h1 {
     left: 0;
     right: 0;
     top: 30%;
-}
+}*/
 .ngn-default{
-	width: 200px;
-    height: 150px;
+	height: 30px;
+    padding: 4px;
+    border-radius: 3px;
 }
 .ngn-success{
 	color: #fff;
@@ -34,10 +35,10 @@ h1 {
     border-color: #c12e2a;
 }
 .ngn-icon{
-	margin: 5px;
+    float: left;
 }
 .ngn-default .ngn-icon img{
-	width: 90px;
+	margin-top: 2px;
 }	
 .ngn-close{
 	float: right;
@@ -47,7 +48,7 @@ h1 {
 .ngn-close:hover{
 	opacity: 0.5;
 }
-.ngn-wrapper{
+/*.ngn-wrapper{
 	position: fixed;
     top: 0;
     left: 0;
@@ -56,7 +57,7 @@ h1 {
     width: 100%;
     height: 100%;
     opacity: 0;
-}
+}*/
 .ngn-loader{
 	text-align: center;
 	padding: 10px;
