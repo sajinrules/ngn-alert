@@ -15,9 +15,9 @@ import { NgnAlertService } from './ngn-alert.service'
 		})),
 		state('active',   style({
 			display:'block',
-			opacity:1
+			opacity:0.7
 		})),
-		transition('active <=> inactive', animate('200ms ease-out'))
+		transition('active <=> inactive', animate('300ms')),
 		])
 	]
 })
@@ -28,14 +28,12 @@ export class NgnAlertComponent implements OnInit {
 	constructor(private ngnAlertService:NgnAlertService){}
 
 	ngOnInit(){
-		console.log("this.state:",this.state);
 		this.ngnAlertService.ngnState().subscribe(message => {
-			console.log("message:",message);
 			this.options=message;
 			this.setState(this.options.state)
 			if(this.options.autoDismis && this.options.type!=='loading'){
 				setTimeout(()=>{
-					//this.setState('inactive')
+					this.setState('inactive')
 				},this.options.timeout);
 			}
 		});		

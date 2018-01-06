@@ -1,22 +1,11 @@
 h1 {
   color: red;
 }
-/*.ngn-alert{
-	text-align: center;
-	padding: 10px;
-	border: 1px solid;
-	margin: 0 auto;
-	font-size: 20px;
-	box-shadow: -1px 3px 7px 3px rgba(0,0,0,0.2);
-	position: relative;
-    left: 0;
-    right: 0;
-    top: 30%;
-}*/
+
 .ngn-default{
-	height: 30px;
-    padding: 4px;
-    border-radius: 3px;
+    padding: .50rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
 }
 .ngn-success{
 	color: #fff;
@@ -35,11 +24,16 @@ h1 {
     border-color: #c12e2a;
 }
 .ngn-icon{
-    float: left;
+    display: inline;
 }
-.ngn-default .ngn-icon img{
+.ngn-content{
+    display: inline;
+    vertical-align: super;
+    margin-left: 5px;
+}
+/* .ngn-default .ngn-icon img{
 	margin-top: 2px;
-}	
+}	 */
 .ngn-close{
 	float: right;
     height: 18px;
@@ -48,48 +42,12 @@ h1 {
 .ngn-close:hover{
 	opacity: 0.5;
 }
-/*.ngn-wrapper{
-	position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.4);
-    z-index: 5;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-}*/
-.ngn-loader{
-	text-align: center;
-	padding: 10px;
-	margin: 0 auto;
-	font-size: 20px;
-	position: relative;
-    left: 0;
-    right: 0;
-    top: 30%;
-}
-.loader {
+.ngn-wrapper{
+    max-width: 200px;
+    min-width: 200px;
     position: absolute;
-    left: 0;
-    right: 0;
-    top: 40%;
-    /* bottom: 0; */
-    margin: 0 auto;
-    border: 4px solid transparent;
-    border-radius: 50%;
-    border-top: 4px solid #fff;
-    width: 24px;
-    height: 24px;
-    -webkit-animation: spin 1s linear infinite;
-    animation: spin 1s linear infinite;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
 }
 
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}

@@ -10,7 +10,7 @@ export class AppComponent {
 	title = 'app';
 	options = {
 		text:"Success !",
-		type:"success",
+		type:"fail",
 		autoDismis:true,
 		timeout:2000
 	}
@@ -18,7 +18,6 @@ export class AppComponent {
 		
 	}
 	onclick(){
-		console.log("clicked");
 		this.ngnAlertService.ngnActivate(this.options);
 	}
 
