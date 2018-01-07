@@ -3,7 +3,7 @@ ngn-alert provides you an alert service to convey messages. It has a simple serv
 
 ## Installation
 
-```
+```javascript
 npm install ngn-alert
 ```
 
@@ -11,10 +11,10 @@ npm install ngn-alert
 ---
 Include ngn-alert module in your module.
 
-```
+```javascript
 import { NgnAlertModule } from 'ngn-alert';
 ```
-```
+```javascript
 @NgModule({
     declarations: [
     ],
@@ -30,11 +30,11 @@ export class ExampleModule { }
 ## Try it
 ---
 First of import ngn-alert service in your component where you want to use to communicate with ngn-alert API.
-```
+```javascript
 import { NgnAlertService } from 'ngn-alert';
 ```
 Use it on Constructor of the required class
-```
+```javascript
 constructor(private ngnAlertService:NgnAlertService){
 }
 ```
