@@ -2,14 +2,17 @@
 	<div class="ngn-alert ngn-default ngn-success" *ngSwitchCase="'success'">
 		<div class="ngn-icon"><img src="../../assets/ic_done_white_24px.svg"/></div>
 		<div class="ngn-content">{{options.text}}</div>
+		<div class="ngn-icon ngn-close" (click)="ngnClose()"><img src="../../assets/ic_clear_white_18px.svg"/></div>
 	</div>
 	<div class="ngn-alert ngn-default ngn-danger" *ngSwitchCase="'fail'">
 		<div class="ngn-icon"><img src="../../assets/ic_error_white_24px.svg"/></div>
 		<div class="ngn-content">{{options.text}}</div>
+		<div class="ngn-icon ngn-close" (click)="ngnClose()"><img src="../../assets/ic_clear_white_18px.svg"/></div>
 	</div>
 	<div class="ngn-alert ngn-default ngn-warning" *ngSwitchCase="'warning'">
 		<div class="ngn-icon"><img src="../../assets/ic_warning_white_24px.svg"/></div>
 		<div class="ngn-content">{{options.text}}</div>
+		<div class="ngn-icon ngn-close" (click)="ngnClose()"><img src="../../assets/ic_clear_white_18px.svg"/></div>
 	</div>
 	<div class="ngn-loader" *ngSwitchCase="'loading'">
 		<div class="loader"></div>

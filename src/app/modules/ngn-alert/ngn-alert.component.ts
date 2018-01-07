@@ -31,14 +31,21 @@ export class NgnAlertComponent implements OnInit {
 		this.ngnAlertService.ngnState().subscribe(message => {
 			this.options=message;
 			this.setState(this.options.state)
-			if(this.options.autoDismis && this.options.type!=='loading'){
+			if(this.options.autoDismis && this.options.timeout){
 				setTimeout(()=>{
 					this.setState('inactive')
 				},this.options.timeout);
+			}else if(this.options.autoDismis!==false){
+				setTimeout(()=>{
+					this.setState('inactive')
+				},2000);
 			}
 		});		
 	}
 	setState(state){
 		this.state=state;
+	}
+	ngnClose(){
+		this.ngnAlertService.ngnDeactivate()
 	}
 }

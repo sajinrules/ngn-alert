@@ -11,7 +11,7 @@ export class AppComponent {
 	options = {
 		text:"Success !",
 		type:"fail",
-		autoDismis:true,
+		autoDismis:false,
 		timeout:2000
 	}
 	constructor(private ngnAlertService:NgnAlertService){

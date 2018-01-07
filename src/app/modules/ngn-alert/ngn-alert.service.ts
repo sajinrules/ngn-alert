@@ -16,12 +16,12 @@ export class NgnAlertService{
         this.ngnSubject.next(this.options);
         //return this.ngnSubject.asObservable()
     }
-    ngnOpen(){
-        this.ngnSubject.next("activate");  
-    } 
-    ngnClose():Observable<any>{
-        return this.ngnSubject.asObservable()
-    }
+    // ngnOpen(){
+    //     this.ngnSubject.next("activate");  
+    // } 
+    // ngnClose():Observable<any>{
+    //     return this.ngnSubject.asObservable()
+    // }
     ngnState():Observable<any>{
         return this.ngnSubject.asObservable()
     }
