@@ -1,30 +1,78 @@
 # NgnAlert
+ngn-alert provides you an alert service to convey messages. It has a simple service that can use in your Angular 4+ applications.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+## Installation
 
-## Development server
+```
+npm install ngn-alert
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Configuration
+---
+Include ngn-alert module in your module.
 
-## Code scaffolding
+```
+import { NgnAlertModule } from 'ngn-alert';
+```
+```
+@NgModule({
+    declarations: [
+    ],
+    imports: [
+        NgnAlertModule.forRoot(),
+        BrowserModule
+    ],
+  bootstrap: []
+})
+export class ExampleModule { }
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Try it
+---
+First of import ngn-alert service in your component where you want to use to communicate with ngn-alert API.
+```
+import { NgnAlertService } from 'ngn-alert';
+```
+Use it on Constructor of the required class
+```
+constructor(private ngnAlertService:NgnAlertService){
+}
+```
+The service provides two functions to Activate and Deactivate alert messages.
+1. ***ngnActivate*** - Activate alert with options.
+2. ***ngnDeactivate*** - Deactivate activated alerts.
 
-## Build
+### eg:
+```javascript
+export class AppComponent {
+	title = 'MyApp';
+	options = {
+		text:"Success !",
+		type:"fail",
+		autoDismis:false,
+		timeout:2000
+	}
+	constructor(private ngnAlertService:NgnAlertService){}
+	activate(){
+		this.ngnAlertService.ngnActivate(this.options);
+	}
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+}
+```
+you can use same for ***ngnDeactivate()***
+```javascript
+Deactivate(){
+    this.ngnAlertService.ngnDeactivate()
+}
 
-## Running unit tests
+```
+### options
+functions            | type   | Definition
+---------------------|--------| -------------
+***text***           | String | The text to be displayed in the alert, eg: Success, Fail, Send etc. Make it small to contain the alert box. 
+***type***           | String |The type of message. It only accepts certain string values ```success```, ```fail```, ```warning```
+***autoDismis***     | Boolean | The alert should dismiss automatically or not. ```true``` or ```false```
+***timeout***        | Number (in milliseconds)  | If you have set ```autoDismis=true```, then you can set time a for auto dismiss.Default is 2 seconds (2000 ms)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-=======
-# ngn-alert
-npm module
