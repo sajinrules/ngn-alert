@@ -1,7 +1,27 @@
 {
   "name": "ngn-alert",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
+  "author": {
+    "name": "Sajin Aboobakkar",
+    "url": "https://github.com/sajinrules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sajinrules/ngn-alert"
+  },
+  "keywords": [
+    "angular2",
+    "angular4+",
+    "angular5",
+    "alert",
+    "angular-cli",
+    "angular2 alert",
+    "angular4 alert",
+    "angular5 alert",
+    "angular alert",
+    "popup message"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
